@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   margin: 0 auto;
   max-width: 700px;
@@ -5,7 +9,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   color:burlywood;
+  font-size: 24px;
+  text-align: center;
+}
+
+.block-image {
+  max-width: 300px;
+  height: auto;
+}
+
+.page-image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
