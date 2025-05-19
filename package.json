@@ -1,0 +1,23 @@
+{
+  "name": "Wedding landing page",
+  "version": "1.0.0",
+  "description": "My wedding",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S1ler/Wedding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S1ler/Wedding/issues"
+  },
+  "homepage": "https://github.com/S1ler/Wedding#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
