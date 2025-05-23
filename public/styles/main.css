@@ -1,25 +1,131 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Vibes";
+  src: local("/fonts/great_vibes/greatvibes-regular.ttf"), local("/fonts/great_vibes/greatvibes-regular.ttf"), url("/fonts/great_vibes/greatvibes-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("/fonts/playfaid/playfairdisplaysc_bold.ttf"), local("/fonts/playfaid/playfairdisplaysc_bold.ttf"), url("/fonts/playfaid/playfairdisplaysc_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("/fonts/playfaid/playfairdisplaysc-blackitalic.ttf"), local("/fonts/playfaid/playfairdisplaysc-blackitalic.ttf"), url("/fonts/playfaid/playfairdisplaysc-blackitalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("Playfair Display SC Bold Italic"), local("playfairdisplaysc-BoldItalic"), url("/fonts/playfaid/playfairdisplaysc-bolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("Playfair Display SC Black"), local("playfairdisplaysc-Black"), url("/fonts/playfaid/playfairdisplaysc-black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("Playfair Display SC Italic"), local("playfairdisplaysc-Italic"), url("/fonts/playfaid/playfairdisplaysc-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display SC";
+  src: local("Playfair Display SC Regular"), local("playfairdisplaysc-Regular"), url("/fonts/playfaid/playfairdisplaysc-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #333333;
+  font-size: 16px;
+  background-color: #f6f6f4;
+}
+
+.header {
+  margin-top: 20px;
+}
+.header__title_top {
+  font-family: "Vibes", Arial, sans-serif;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+.header__title_bottom {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Playfair Display SC", sans-serif;
+  font-size: 62px;
+  line-height: 1.2;
+  letter-spacing: 4px;
+}
+.header__title_bottom span {
+  display: block;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
   margin: 0 auto;
   max-width: 700px;
   padding-inline: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  color: burlywood;
-  font-size: 24px;
-  text-align: center;
 }
 
 .block-image {
-  max-width: 300px;
+  margin-top: 10px;
+  max-width: 100%;
   height: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.block-image::before, .block-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f8f8f8;
+  z-index: 10; /* Переконайтеся, що ефект відображається над фоном */
+  pointer-events: none; /* Щоб не заважати клікам на зображення */
+}
+.block-image::before {
+  top: 0;
+  background-image: url("/images/texture.png");
+  background-repeat: no-repeat;
+  background-size: 117%;
+  background-position: -28px bottom;
+  z-index: 999;
+  background-color: transparent;
+}
+.block-image::after {
+  background-image: url("/images/texture.png");
+  bottom: -1px;
+  background-repeat: no-repeat;
+  background-size: 117%;
+  background-position: -35px -33px;
+  z-index: 999;
+  background-color: transparent;
 }
 
 .page-image {

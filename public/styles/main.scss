@@ -1,25 +1,101 @@
+$back_color1 : #F8F8F8;
+$back_color2 : #F2F2F2;
+$back_color3 : #f6f6f4;
+$green_color1 : #8FA36F;
+$green_color2 : #7B925D;
+$cream1 : #E3D8CC;
+$cream2 : #D7C7B2;
+$font1 : #333333;
+$font2 : #222222;
+
+@import "font";
+
 * {
   box-sizing: border-box;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $font1;
+  font-size: 16px;
+  background-color: $back_color3;
+}
+
+.header {
+  margin-top: 20px;
+  &__title {
+    &_top {
+      font-family: "Vibes", Arial, sans-serif;
+      font-size: 50px;
+      letter-spacing: 3px;
+    }
+    &_bottom {
+      margin-top: 10px;
+      text-align: center;
+      font-family: "Playfair Display SC", sans-serif;
+      font-size: 62px;
+      line-height: 1.2;
+      letter-spacing: 4px;
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 .container {
   margin: 0 auto;
   max-width: 700px;
   padding-inline: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  color:burlywood;
-  font-size: 24px;
-  text-align: center;
 }
 
 .block-image {
-  max-width: 300px;
+  margin-top: 10px;
+  max-width: 100%;
   height: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f8f8f8;
+    z-index: 10; /* Переконайтеся, що ефект відображається над фоном */
+    pointer-events: none; /* Щоб не заважати клікам на зображення */
+  }
+
+  &::before {
+    top: 0;
+    background-image: url('/images/texture.png');
+    background-repeat: no-repeat;
+    background-size: 117%;
+    background-position: -28px bottom;
+    z-index: 999;
+    background-color: transparent;
+  }
+
+  &::after {
+    background-image: url('/images/texture.png');
+    bottom: -1px;
+    background-repeat: no-repeat;
+    background-size: 117%;
+    background-position: -35px -33px;
+    z-index: 999;
+    background-color: transparent;
+  }
 }
 
 .page-image {
