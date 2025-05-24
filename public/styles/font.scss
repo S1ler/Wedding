@@ -1,63 +1,49 @@
 @font-face {
   font-family: 'Vibes';
-  src: local('/fonts/great_vibes/greatvibes-regular.ttf'), local('/fonts/great_vibes/greatvibes-regular.ttf'),
-  url("/fonts/great_vibes/greatvibes-regular.ttf") format('truetype');
+  src: url("/fonts/great_vibes/greatvibes-regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair Display SC';
-  src: local('/fonts/playfaid/playfairdisplaysc_bold.ttf'), local('/fonts/playfaid/playfairdisplaysc_bold.ttf'),
-  url('/fonts/playfaid/playfairdisplaysc_bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: "Lora";
+  src: url("/fonts/Lora-VariableFont_wght.ttf") format('truetype');
+  font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair Display SC';
-  src: local('/fonts/playfaid/playfairdisplaysc-blackitalic.ttf'), local('/fonts/playfaid/playfairdisplaysc-blackitalic.ttf'),
-  url('/fonts/playfaid/playfairdisplaysc-blackitalic.ttf') format('truetype');
-  font-weight: 900;
+  font-family: "Lora";
+  src: url("/fonts/Lora-Italic-VariableFont_wght.ttf") format('truetype');
+  font-weight: 400 800;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair Display SC';
-  src: local('Playfair Display SC Bold Italic'), local('playfairdisplaysc-BoldItalic'),
-  url('/fonts/playfaid/playfairdisplaysc-bolditalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Playfair Display SC';
-  src: local('Playfair Display SC Black'), local('playfairdisplaysc-Black'),
-  url('/fonts/playfaid/playfairdisplaysc-black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Playfair Display SC';
-  src: local('Playfair Display SC Italic'), local('playfairdisplaysc-Italic'),
-  url('/fonts/playfaid/playfairdisplaysc-italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Playfair Display SC';
-  src: local('Playfair Display SC Regular'), local('playfairdisplaysc-Regular'),
-  url('/fonts/playfaid/playfairdisplaysc-regular.ttf') format('truetype');
+  font-family: "Comforter Brush";
+  src: url("/fonts/ComforterBrush-Regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format('truetype');
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 
