@@ -11,25 +11,38 @@
     <div class="container header__container">
         <div class="header__title header__title_top">Save the date</div>
     </div>
-    <div class="block-image"><img src="/images/main.jpg" alt="Image" class="page-image"></div>
+    <div class="block__image"><img src="/images/main.jpg" alt="Image" class="page__image"></div>
     <h1 class="header__title header__title_bottom">
-        ІГОР <span>&</span> ЮЛІЯ
+        ІГОР <span>&</span> ЮЛЯ
     </h1>
 </header>
 <main class="main">
-    <section class="main__invitation invitation">
+    <section class="main__section date">
+        <div class="container">
+            <div class="date__wrapper">
+                <div class="date__month">Червень</div>
+                <div class="date__inner">
+                    <div class="date__number">21</div>
+                    <div class="date__time">15:00</div>
+                </div>
+                <div class="date__year">2025</div>
+            </div>
+        </div>
+    </section>
+    <section class="main__section invitation">
         <div class="container">
             <h2 class="invitation__title page__title">
               <span class="page__title_inner">Дорогі <span>рідні та близькі!</span></span>
             </h2>
-            <p class="invitation-text page-text">
+            <p class="invitation__text page__text">
                 Ми раді запросити вас на найважливіший день у нашому житті! Нехай цей день стане особливим не лише для нас,
                 а й для вас. Ми з нетерпінням чекаємо, коли зможемо розділити з вами радість, емоції та незабутні моменти!
             </p>
         </div>
     </section>
-    <section class="main__timer timer">
+    <section class="main__section timer">
         <div class="container">
+            <div class="timer__title">До початку весілля залишилось:</div>
             <div id="countdown" class="timer__display">
                 <div class="timer__segment">
                     <span class="timer__numbers" id="days">00</span>
@@ -51,10 +64,10 @@
             <p id="message"></p>
         </div>
     </section>
-    <section class="main__calendar calendar">
+    <section class="main__section calendar">
         <div class="container calendar__container">
             <h2 class="calendar__title page__title">
-                <span class="page__title_inner">Червень</span>
+                <span class="page__title_inner">Дата Весілля</span>
             </h2>
             <div class="weekdays">
                 <div>Пн</div>
@@ -110,7 +123,7 @@
             </div>
         </div>
     </section>
-    <section class="main__details details">
+    <section class="main__section details">
         <div class="container">
             <h2 class="details__title page__title">
                 <span class="page__title_inner">Деталі</span>
@@ -134,6 +147,52 @@
                 Ми мріємо зробити це свято затишним і камерним, тож плануємо провести його лише в колі дорослих.
                 Просимо залишити діток удома й подарувати собі відпочинок та романтичну атмосферу разом із нами.
             </p>
+        </div>
+    </section>
+    <section class="main__section location">
+        <div class="container">
+            <h2 class="location__title page__title">
+                <span class="page__title_inner">Місце проведення</span>
+            </h2>
+            <p class="location__text page__text">
+                м.Луцьк <br>
+                вулиця Рівненська, 135, 45601 <br>
+                готельний комплекс "Рестпарк"
+            </p>
+            <a href="https://maps.app.goo.gl/n7hsWAPU8pJ453Rv5" class="page__button" target="_blank">Відкрити на карті</a>
+            <div class="location__wrapper">
+
+            </div>
+        </div>
+    </section>
+    <section class="main__section form">
+        <div class="container">
+            <h2 class="form__title page__title">
+                <span class="page__title_inner">Форма підтвердження</span>
+            </h2>
+            <p class="form__text page__text">
+                Будемо вдячні якщо ви додатково підтвердите свою участь через заповнення форми нище.
+            </p>
+        <form id="rsvpForm" action="/submit-rsvp" method="POST">
+            <div class="form-group">
+                <label for="name">Ім'я та Призвіще:</label>
+                <input type="text" placeholder="Ім'я Прізвище" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" pattern="[+]{0,1}[0-9]{9,12}" required>
+            </div>
+            <div class="form-group">
+                <label for="willAttend">Будете на весіллі?</label>
+                <select id="willAttend" name="willAttend" required>
+                    <option value="">Оберіть...</option>
+                    <option value="yes">Так з радістю буду</option>
+                    <option value="no">Нажаль не зможу бути</option>
+                </select>
+            </div>
+            <button class="page__button" type="submit">Надіслати</button>
+        </form>
+        <div id="responseMessage" class="message"></div>
         </div>
     </section>
 </main>

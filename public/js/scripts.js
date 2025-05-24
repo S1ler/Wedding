@@ -42,3 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Викликаємо функцію відразу, щоб уникнути затримки на 1 секунду при першому відображенні
     updateCountdown();
 });
+
+document.getElementById('rsvpForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Запобігаємо стандартній відправці форми
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(data).toString(),
+        });
+
+        const result = await response.text();
+        document.getElementById('responseMessage').textContent = result;
+        if (response.ok) {
+            form.reset(); // Очищаємо форму після успішної відправки
+        }
+    } catch (error) {
+        console.error('Помилка відправки форми:', error);
+        document.getElementById('responseMessage').textContent = 'Виникла помилка під час надсилання форми. Будь ласка, спробуйте пізніше.';
+    }
+});

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/S1ler/Wedding#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "googleapis": "^149.0.0"
   }
 }
