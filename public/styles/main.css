@@ -152,6 +152,7 @@ body {
 }
 
 .block__image {
+  text-align: center;
   margin-top: 10px;
   max-width: 100%;
   height: auto;
